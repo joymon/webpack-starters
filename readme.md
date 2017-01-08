@@ -6,6 +6,6 @@ At this point these starters don't have hot reloading, webbserver etc...
 
 > These are mainly for learning purpose. Not ready to just clone and start a production app.
 
-- [ECMA](/ECMA/readme.md)
+- [ECMA](/ECMA5/readme.md)
 - ECMA-TypeScript
 - TypeScript-Angular1
