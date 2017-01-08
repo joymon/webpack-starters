@@ -44,8 +44,17 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var ngModule = __webpack_require__(1);
+	var hrApp = new ngModule.AppModule();
+	__webpack_require__(4);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
-	var angular = __webpack_require__(1);
+	var angular = __webpack_require__(2);
 	var AppModule = (function () {
 	    function AppModule() {
 	        this.app = angular.module("app", []);
@@ -78,19 +87,18 @@
 	    return AppModule;
 	}());
 	exports.AppModule = AppModule;
-	var hrApp = new AppModule();
-
-
-/***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(2);
-	module.exports = angular;
 
 
 /***/ },
 /* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(3);
+	module.exports = angular;
+
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 	/**
@@ -33075,6 +33083,28 @@
 	})(window);
 
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var ngMod = __webpack_require__(1);
+	//document.write(content);
+	//var loggerModule = require("./logger");
+	//var logger = new loggerModule.logger();
+	//logger.log("TypeScript Worked !!!");
+	//var angular = require('./ngmodule');
+	//alert(angular); 
+	var SampleComponent = (function () {
+	    function SampleComponent() {
+	        this.templateUrl = './sample.component.html';
+	    }
+	    return SampleComponent;
+	}());
+	exports.SampleComponent = SampleComponent;
+	ngMod.AppModule.getInstance().registerComponent("sample", new SampleComponent());
+
 
 /***/ }
 /******/ ]);

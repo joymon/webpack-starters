@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./ngmodule.ts",
+    entry: "./bootstrap.ts",
     output: {
         filename: "bundle.js"
     },

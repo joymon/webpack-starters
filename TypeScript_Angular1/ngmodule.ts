@@ -32,4 +32,3 @@ export class AppModule {
             this.app.component(name, options);
         }
     }
-    var hrApp: AppModule = new AppModule();
