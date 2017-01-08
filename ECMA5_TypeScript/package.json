@@ -1,0 +1,19 @@
+{
+  "name": "tsdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "dependencies": {
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.58",
+    "ts-loader": "^1.3.3",
+    "typescript": "^2.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
