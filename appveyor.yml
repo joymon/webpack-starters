@@ -20,6 +20,6 @@ test_script:
   - webpack -p
   
 artifacts:
-  - path: TypeScript-Angular1-Adv
+  - path: TypeScript-Angular1-Adv/dist
 # Don't actually build.
 build: off
