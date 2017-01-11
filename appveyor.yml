@@ -10,7 +10,8 @@ install:
   - npm install -g webpack  
   
 # scripts to run before build
-before_build:
+# Post-install test scripts.
+test_script:
   # install node modules
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd TypeScript-Angular1-Adv
