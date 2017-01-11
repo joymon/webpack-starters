@@ -20,3 +20,5 @@ before_build:
   
 artifacts:
   - path: TypeScript-Angular1-Adv
+# Don't actually build.
+build: off
