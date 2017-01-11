@@ -1,11 +1,12 @@
 var webpack = require("webpack");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
         app:"./bootstrap.ts",
         vendor:["angular"]
     },
     output: {
-        filename: "bundle.js"
+        filename: "dist/bundle.js"
     },
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
@@ -17,6 +18,12 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({minimize: true}),
-        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"dist/vendor.bundle.js"),
+        new CopyWebpackPlugin([
+            {
+                from: '*.html',
+                to: 'dist/'
+            }
+        ])
     ]
 }
