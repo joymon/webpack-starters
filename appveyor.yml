@@ -25,6 +25,7 @@ artifacts:
 # Don't actually build.
 build: off
 deploy_script:
+  - cd..
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email joymon@gmail.com
