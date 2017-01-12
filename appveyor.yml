@@ -28,6 +28,6 @@ deploy_script:
   - cd..
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - git config --global user.email joymon@gmail.com
+  - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
   - git subtree push --prefix TypeScript-Angular1-Adv/dist origin gh-pages
