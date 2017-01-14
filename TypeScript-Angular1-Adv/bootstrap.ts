@@ -1,4 +1,5 @@
 var ngModule = require("./ngmodule");
-new ngModule.AppModule();
-// Registration of angular components go here
+new ngModule.AdvModule.AppModule();
+// Registration of angular components go here in order
+require("./sample.service.ts");
 require("./sample.component.ts");

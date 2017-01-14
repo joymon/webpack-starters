@@ -1,6 +1,8 @@
-export class logger{
-     public log(msg:string){
-        console.log(msg);
-        document.write(msg);
-   }
+export module Utils{
+    export class logger{
+        public log(msg:string){
+            console.log("msg");
+            document.write(msg);
+        }
+    }
 }
