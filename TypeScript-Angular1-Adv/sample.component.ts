@@ -4,7 +4,6 @@ var ngMod = require("./ngmodule")
 //var logger = new loggerModule.logger();
 //logger.log("TypeScript Worked !!!");
 //var angular = require('./ngmodule');
-//alert(angular);
 module SampleModule { 
     export class SampleController implements ng.IController {
 

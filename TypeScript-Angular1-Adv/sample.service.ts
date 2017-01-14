@@ -13,7 +13,6 @@ var appmodule = require('./ngmodule');
             WhatsNew: "http://joymon.github.io/Data/Home/WhatsNew.html",
             WhoAmI: "http://joymon.github.io/Data/Home/WhoAmI.html"
         };
-
         GetUrl(source: string): string {
             return this.sourceToUrlMap[source];
         }
