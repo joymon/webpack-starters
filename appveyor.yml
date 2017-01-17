@@ -29,6 +29,8 @@ on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - cd..
+  - ps: New-Item -ItemType Directory -Force docs
+  - ps: Remove-Item docs\*
   - ps: Copy-Item TypeScript-Angular1-Adv\dist\* docs
   - dir docs
   - git config --global user.email "joymon@gmail.com"
