@@ -19,6 +19,9 @@ test_script:
   - npm install
   # run webpack with production flag
   - webpack -p
+
+skip_commits:
+  message: /\[skip ci\]/
   
 artifacts:
   - path: TypeScript-Angular1-Adv/dist
@@ -30,7 +33,8 @@ on_success:
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
   - git add docs
-  - git commit -- docs
+  - git commit -- docs - m "[skip ci]"
+  - git status
   - git push origin master 
 # Don't actually build.
 build: off
