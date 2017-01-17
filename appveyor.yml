@@ -35,7 +35,9 @@ on_success:
   - dir docs
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
+  - git remote set-head origin master
   - git add docs
+  - git status
   - git commit -m "[skip ci]" -- docs 
   - git status
   - git push origin master 
