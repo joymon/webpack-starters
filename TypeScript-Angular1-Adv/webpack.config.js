@@ -16,6 +16,10 @@ module.exports = {
             { test: /\.ts$/, loader: 'ts-loader' }
         ]
     },
+    devServer: {
+        contentBase: "dist",
+        hot: true
+    },
     plugins: [
         new webpack.optimize.UglifyJsPlugin({minimize: true}),
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"dist/vendor.bundle.js"),

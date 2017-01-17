@@ -1,5 +1,5 @@
 var angular = require('angular');
-module AdvModule {
+export module AdvModule {
     export class AppModule {
         //Do not expose the property as it is not expected to change from outside.
         private static currentCountryModule: AppModule;
