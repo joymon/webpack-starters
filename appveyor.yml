@@ -21,13 +21,14 @@ test_script:
   - webpack -p
   
 artifacts:
-  - path: TypeScript-Angular1-Adv
+  - path: TypeScript-Angular1-Adv/dist
 on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - Copy-Item dist\* %APPVEYOR_BUILD_FOLDER%\docs
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
-  - git commit -- dist
+  - git commit -- docs
   - git push
 # Don't actually build.
 build: off
