@@ -35,6 +35,8 @@ on_success:
   - dir docs
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
+  - git checkout master
+  - git status
   - git add docs
   - git commit -m "[skip ci]" -- docs 
   - git status
