@@ -30,6 +30,7 @@ on_success:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - cd..
   - ps: Copy-Item TypeScript-Angular1-Adv\dist\* docs
+  - dir docs
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
   - git add docs
