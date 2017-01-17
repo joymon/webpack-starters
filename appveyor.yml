@@ -25,10 +25,11 @@ artifacts:
 on_success:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
-  - ps: Copy-Item dist\* %APPVEYOR_BUILD_FOLDER%\docs
+  - cd..
+  - ps: Copy-Item TypeScript-Angular1-Adv\dist\* docs
   - git config --global user.email "joymon@gmail.com"
   - git config --global user.name "joymon"
   - git commit -- docs
-  - git push
+  - git push origin master 
 # Don't actually build.
 build: off
