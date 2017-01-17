@@ -1,7 +1,8 @@
 # environment variables
 environment:
   nodejs_version: "6"
-
+  access_token:
+    secure: YwffwDvba/ADlMJbtnOM7cKUqudcbYCt2K74HOtBvscwylmIMSRmrX2VKc+fuNjN
 # scripts that run after cloning repository
 install:
   # install node 
@@ -21,5 +22,12 @@ test_script:
   
 artifacts:
   - path: TypeScript-Angular1-Adv
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "joymon@gmail.com"
+  - git config --global user.name "joymon"
+  - git commit ...
+  - git push ...
 # Don't actually build.
 build: off
