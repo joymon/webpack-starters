@@ -45,10 +45,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	//require('./stylesheet.css');
+	//require('style!css!./stylesheet.css');
+	//require('style!css!./childstylesheet.css');
 	__webpack_require__(1);
-
+	__webpack_require__(9);
 	//document.write("Webpack working");
-	var content = __webpack_require__(9)
+	var content = __webpack_require__(11)
 	document.write(content);
 
 
@@ -88,7 +90,7 @@
 
 
 	// module
-	exports.push([module.id, "h2{\r\n  font-weight: 100;  \r\n  font-style: italic;\r\n}", ""]);
+	exports.push([module.id, "h2{\r\n  font-weight: 100;  \r\n  font-style: italic;\r\n}\r\n\r\n", ""]);
 
 	// exports
 
@@ -2446,6 +2448,46 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(10);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(8)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./node_modules/css-loader/index.js!./childstylesheet.css", function() {
+				var newContent = require("!!./node_modules/css-loader/index.js!./childstylesheet.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)(undefined);
+	// imports
+
+
+	// module
+	exports.push([module.id, ".element\r\n{\r\n    font-style: italic;\r\n    color: red\r\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = "This is my first <h2>JavaScript</h2> module"
