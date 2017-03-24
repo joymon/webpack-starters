@@ -1,0 +1,1 @@
+module.exports = "This is my first <h2>JavaScript</h2> module"
