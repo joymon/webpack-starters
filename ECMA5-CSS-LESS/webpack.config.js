@@ -8,11 +8,11 @@ module.exports = {
         loaders: [
             { 
                 test: /\.css$/, 
-                loader: ExtractTextPlugin.extract('style-loader','css-loader') 
+                loader: ExtractTextPlugin.extract('css-loader') 
             },
             { 
                 test: /\.less$/, 
-                loader: ExtractTextPlugin.extract('style-loader','css-loader!less-loader') 
+                loader: ExtractTextPlugin.extract('css-loader!less-loader') 
             }
         ]
     },
