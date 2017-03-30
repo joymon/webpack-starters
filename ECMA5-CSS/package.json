@@ -1,5 +1,5 @@
 {
-  "name": "tsdemo",
+  "name": "ECMA5-CSS-Demo",
   "version": "1.0.0",
   "description": "",
   "main": "bundle.js",
@@ -13,6 +13,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Joymon",
   "license": "ISC"
 }
