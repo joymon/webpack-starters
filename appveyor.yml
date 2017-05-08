@@ -19,6 +19,7 @@ test_script:
   - npm install
   # run webpack with production flag
   - webpack -p
+  - npm test
 
 skip_commits:
   message: /\[skip ci\]/
