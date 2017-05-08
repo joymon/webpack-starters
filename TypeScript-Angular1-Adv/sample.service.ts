@@ -20,9 +20,9 @@ var appmodule = require('./ngmodule');
             let lurl = this.GetUrl(feedURL);
             var deffered = this.q.defer<any>();
             this.http.get<any>(lurl)
-                .error((err) => { deffered.reject(err); })
+                .catch((err) => { deffered.reject(err); })
                 .then((s) => {
-                    deffered.resolve({ data: s.data });
+                    deffered.resolve({ data: s });
                 });
             return deffered.promise;
         }
