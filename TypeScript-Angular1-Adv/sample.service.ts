@@ -1,5 +1,5 @@
 var appmodule = require('./ngmodule');
-   module SampleModule {
+   
     export class SampleService {
         static $inject = ["$http", "$q"];
 
@@ -31,4 +31,4 @@ var appmodule = require('./ngmodule');
         }
     }
     appmodule.AdvModule.AppModule.getInstance().registerService("SampleService", SampleService);
-   }
+   

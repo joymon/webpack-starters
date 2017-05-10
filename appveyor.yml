@@ -9,7 +9,7 @@ install:
   - ps: Install-Product node $Env:nodejs_version
   - npm install -g npm
   - npm install -g webpack  
-  
+  - (Get-Content .\TypeScript-Angular1-Adv\version.ts).replace('[VERSION]', $env:APPVEYOR_BUILD_VERSION) | Set-Content .\TypeScript-Angular1-Adv\version.ts
 # scripts to run before build
 # Post-install test scripts.
 test_script:

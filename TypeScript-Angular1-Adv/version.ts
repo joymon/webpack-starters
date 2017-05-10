@@ -1,0 +1,1 @@
+export var version ="[VERSION]";
