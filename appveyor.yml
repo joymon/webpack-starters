@@ -10,13 +10,15 @@ install:
   - npm install -g npm
   - npm install -g webpack  
   - ps: (Get-Content .\TypeScript-Angular1-Adv\version.ts).replace('[VERSION]', $env:APPVEYOR_BUILD_VERSION) | Set-Content .\TypeScript-Angular1-Adv\version.ts
-# scripts to run before build
-# Post-install test scripts.
-test_script:
-  # install node modules
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd TypeScript-Angular1-Adv
   - npm install
+# scripts to run before build
+#build_script:
+
+# Post-install test scripts.
+test_script:
+  # install node modules
   # run webpack with production flag
   - webpack -p
   - npm test
