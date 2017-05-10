@@ -14,13 +14,12 @@ install:
   - cd TypeScript-Angular1-Adv
   - npm install
 # scripts to run before build
-#build_script:
-
+build_script:
+  - webpack -p
 # Post-install test scripts.
 test_script:
   # install node modules
   # run webpack with production flag
-  - webpack -p
   - npm test
 
 skip_commits:
@@ -44,5 +43,4 @@ on_success:
   - git commit -m "[skip ci]" -- docs 
   - git status
   - git push origin master 
-# Don't actually build.
-build: off
+# Don't actually build. build: off
