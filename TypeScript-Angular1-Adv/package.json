@@ -18,7 +18,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "pretest": "node_modules\\.bin\\webdriver-manager update",
+    "pretest": "node_modules\\.bin\\webdriver-manager update --gecko false",
     "webdriver-start": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
     "protractor": "node node_modules/protractor/bin/protractor protractor.conf.js",
     "http-server": "node_modules/.bin/webpack-dev-server",
