@@ -1,8 +1,9 @@
 describe('angularjs homepage todo list', function() {
-  it('should add a todo', function() {
+  it('title should be present', function() {
     browser.get('http://localhost:8080');
 
     expect(browser.getTitle()).toEqual('TypeScript Angular1 Advanced Sample');
+    console.log("Executed e2e test");
     //element(by.model('todoList.todoText')).sendKeys('write first protractor test');
     //element(by.css('[value="add"]')).click();
 
