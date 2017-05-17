@@ -10,3 +10,4 @@ At this point these starters don't have hot reloading, webbserver etc...
 - [ECMA5-TypeScript](ECMA5-TypeScript/readme.md)
 - [TypeScript-Angular1](TypeScript-Angular1/readme.md)
 - [TypeScript-Angular1-Adv](TypeScript-Angular1-Adv/readme.md)
+[![Build status](https://ci.appveyor.com/api/projects/status/gj29jaudjnsq103a?svg=true)](https://ci.appveyor.com/project/joymon/webpack-starters)
