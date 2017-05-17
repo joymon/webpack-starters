@@ -8,9 +8,11 @@
   },
   "devDependencies": {
     "@types/angular": "^1.5.23",
+    "@types/angular-mocks": "^1.5.9",
     "@types/jasmine": "^2.5.47",
     "@types/node": "^6.0.58",
     "angular": "^1.6.1",
+    "angular-mocks": "^1.6.4",
     "copy-webpack-plugin": "^4.0.1",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
